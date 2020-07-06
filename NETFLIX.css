@@ -35,12 +35,12 @@ img {
 /*ヘッダー
 -------------------------------------*/
 header {
-  background-image: url("../../img/テレビ.jpg");
+  background-image: url("テレビ.jpg");
   min-height: 100vh;
   background-size: cover;
 }
 .header {
-  background-image: url("../../img/ポップコーン.jpg");
+  background-image: url("ポップコーン.jpg");
 }
 .header p {
   font-weight: bold;
