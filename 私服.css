@@ -37,7 +37,7 @@ a {
 /*ヘッダー
 ----------------------------------------------*/
 header {
-  background-image: url(私服header.jpg);
+  background-image: url("私服header.jpg");
   min-height: 70vh;
 }
 header .square {
