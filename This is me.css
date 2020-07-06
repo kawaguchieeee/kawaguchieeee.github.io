@@ -197,7 +197,7 @@ main li {
 }
 .sakuhinn img {
   background-size: cover;
-  width: 42rem;
+  width: 100%;
 }
 .sakuhinn p {
   text-align: center;
@@ -217,12 +217,6 @@ main li {
   }
   main ul {
     padding: 0% 16% 0% 14%;
-  }
-  .sakuhinn {
-    margin: 0% 30rem;
-  }
-  .sakuhinn img {
-    width: 30rem;
   }
 }
 @media (max-width: 800px) {
