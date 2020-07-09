@@ -188,18 +188,22 @@ main li {
 /*ワーク
 -------------------------------------*/
 .sakuhinn {
-  display: flex;
-  justify-content: space-evenly;
+  margin: 5%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .sakuhinn div {
+  margin: 0 auto;
+  text-align: center;
   width: fit-content;
-  margin: 0% 10%;
 }
 .sakuhinn img {
-  background-size: cover;
-  width: 100%;
+  width: 300px;
+  height: auto;
 }
 .sakuhinn p {
+  width: auto;
   text-align: center;
   font-size: 1.3rem;
 }
@@ -210,24 +214,25 @@ main li {
 }
 /*モバイル版
 -----------------------------------------*/
-@media (max-width: 600px) {
-  html {
-    font-size: 50%;
-    width: 90%;
+@media (max-width: 680px) {
+  .sakuhinn {
+    display: block;
+    text-align: center;
   }
-  main ul {
-    padding: 0% 16% 0% 14%;
+  .sakuhinn p {
+    margin-bottom: 10%;
   }
 }
-@media (max-width: 800px) {
-  .mokuji {
-    position: relative;
-    top: 2%;
-    left: 60%;
+@media (max-width: 430px) {
+  .profile-header {
+    font-size: 8rem;
+    margin: 40% auto;
+    min-height: 100vh;
   }
-  .back {
-    position: fixed;
-    bottom: 3%;
-    left: 90%;
-  }
+  .br-pc { display: none; }
+  .br-sp { display: block; }
+}
+@media (min-width:430px) {
+  .br-pc { display: block; }
+  .br-sp { display: none;  }
 }
