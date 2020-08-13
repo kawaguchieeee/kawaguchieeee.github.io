@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  width:100%;
+  height: 100%;
+  color: #fff;
+  box-sizing: border-box;
+}
+/* 共通部分
+------------------------
+----------------------*/
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: transparent;
+  background:-webkit-linear-gradient(35deg,#ffdc80,#fcaf45,#f77737,
+#fd1d1d,#e1306c,#c13584,#833ab4,#405de6);
+-webkit-background-clip: text;
+}
+
+section {
+  height: 100.2vh;
+}
+section h2 {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  top: 6%;
+  font-size: 2rem;
+}
+section p,
+section ul {
+  font-size: 1rem;
+}
+.section {
+  line-height: 1.7;
+  margin: auto;
+  padding: 4% 2%;
+  position: relative;
+  top: 10vh;
+}
+.div-w {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+.div-b {
+  background-color: rgb(0, 0, 0, 0.7);
+}
+/* Header
+------------------------
+----------------------*/
+header {
+  background-image: url(manhattan.jpg);
+  height: 100.1vh;
+  width: 100%;
+  /* object-fit: cover; */
+  background-size: cover;
+}
+h1 {
+  color: transparent;
+  font-size: 10rem;
+  text-align: center;
+  background:-webkit-linear-gradient(45deg,#ffdc80,#fcaf45,#f77737,
+  #fd1d1d,#e1306c,#c13584,#833ab4,#405de6);
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  margin: 0;
+  position: relative;
+  top: 30vh;
+}
+/* Nav
+------------------------
+----------------------*/
+nav {
+  /* position: absolute; */
+  display: none;
+}
+.nav {
+  display: block;
+  background-color: #000;
+  font-size: 2rem;
+  width: 100%;
+
+  z-index: 1;
+  position: fixed;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav a {
+  color: white;
+}
+
+nav.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: +1; /* 透明にならない */
+}
+nav.fixed.none {
+  opacity: 0;
+  z-index: -1;
+}
+/* About 
+------------------------
+----------------------*/
+.about {
+  background-image: url(富士山.jpg);
+  background-size: cover;
+}
+.about-main {
+  color: #000;
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 50vh;
+}
+.about-imgdiv {
+  width: 45%;
+  height: auto;
+  margin: auto 0;
+}
+.about-worddiv {
+  width: 45%;
+  height: auto;
+  margin: auto 0;
+}
+.about-imgdiv img {
+  width: 100%;
+  height: 100%;
+}
+.myname {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+}
+.about ul {
+  margin-left: 20px;
+  margin-top: 10%;
+  text-align: left;
+}
+.about li {
+  line-height: 3;
+  padding-left: 30px;
+  background: left top 8px no-repeat;
+  background-size: 16px auto;
+}
+.about li:nth-child(1){
+  background-image: url(サッカーボールのアイコン.png);
+}
+.about li:nth-child(2){
+  background-image: url(えんぴつ付きのノートアイコン.png);
+ }
+.about li:nth-child(3){
+  background-image: url(マッチョアイコン2.png);
+}
+.about li:nth-child(4){
+  background-image: url(アイコンハート.png);
+}
+.skill {
+  margin-top: 10%;
+}
+.skill div {
+  width: 100%;
+  display:flex;
+  justify-content: space-evenly;
+}
+.skill h3 {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.skill p {
+  text-align: center;
+}
+.star {
+  font-size: 1.1rem;
+}
+.star-color {
+  background:-webkit-linear-gradient(90deg,#ffdc80,#fcaf45,#f77737,
+  #fd1d1d,#e1306c,#c13584,#833ab4,#405de6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.skill small {
+  position: relative;
+  top: -10px56;
+}
+/* Responsive
+------------------------
+----------------------*/
+@media (max-width:960px) {
+  html {
+    font-size: 105%;
+  }
+  h1 {
+    font-size: 7.5rem;
+  }
+  section h2 {
+    font-size: 3rem;
+  }
+  .about-main {
+    width: 84%;
+    height: 60vh;
+    position: relative;
+    top: 15vh;
+  }
+  .about-imgdiv {
+    width: 42%;
+    height: auto;
+    margin: auto 0;
+  }
+  .about-worddiv {
+    width: 51%;
+  }
+  section p, section ul {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width:560px) {
+  .about-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 73vh;
+    top: 8vh;
+  }
+  .about-imgdiv {
+    margin: 0 auto;
+    width: 62%;
+  }
+  .about-worddiv {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+/* Portfolio
+------------------------
+----------------------*/
+.portfolio {
+  background-image: url(シカゴ.jpg);
+  background-size: cover;
+}
+/*白の範囲*/
+.pf-div {
+  width: 60%;
+  height: 60%;
+}
+.pf-main {
+  display: flex;
+  justify-content: space-evenly;
+}
+.pf-main div {
+  width: 35%;
+  height: auto;
+}
+.pf-main img {
+  width: 100%;
+  height: 100%;
+}
+/* Responsive
+------------------------
+----------------------*/
+@media (max-width:960px) {
+  .section {
+    top: 15vh;
+  }
+  .pf-div {
+    height: 60vh;
+  }
+  .pf-main div {
+    width: 40%;
+  }
+}
+
+@media (max-width:560px) {
+  .section {
+    top: 8vh;
+  }
+  .pf-div {
+    width: 84%;
+  }
+  .pf-main {
+    height: 80%;
+    flex-direction: column;
+  }
+  .pf-main div {
+    margin: auto;
+    width: 76%;
+  }
+}
+/* Contact
+------------------------
+----------------------*/
+.contact {
+  background-image: url(ヴェネツィア.jpg);
+  background-size: cover;
+  text-align: center;
+}
+.ct-img {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.5rem;
+}
+.contact a:hover,
+.ct-img:hover {
+  opacity: 0.8;
+}
+.ct-div {
+  width: 60%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4% 2% 1%;
+}
+.contact a {
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.contact a:hover {
+  /* text-decoration: underline; */
+  border-bottom: 1.5px solid;
+  border-image: linear-gradient(35deg,#ffdc80,#fcb045,#f77737,
+  #fd1c1c,#e1306c,#c13584,#833ab4,#405de6);
+  border-image-slice: 1;
+}
+.contact small {
+  letter-spacing: 0.04rem;
+}
+
+@media (max-width:960px) {
+  .ct-div {
+    width: 84%;
+    height: 60vh;
+  }
+  .ct-div div p {
+    line-height: 4.7;
+  }
+}
+
+@media (max-width:560px) {
+  .ct-div div p {
+    line-height: 4;
+  }
+}
+/* wrap
+------------------------
+----------------------*/
+.wrap {
+  overflow: hidden;
+}
+/* Insta button
+------------------------
+------------------------*/
+.insta_btn-div {
+  position: relative;
+  top: 25vh;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.insta_btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background: linear-gradient(60deg,#ffdc80,#fcaf45,#f77737,
+  #fd1d1d,#e1306c,#c13584,#833ab4,#405de6);
+  border-radius: 0.4rem;
+  box-shadow: 0 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.4s; 
+}
+.insta_btn:hover {
+   box-shadow: 0 0 0 0;
+   background: linear-gradient(60deg,#ffdc80cc,#fcaf45cc,#f77737cc,
+   #fd1d1dcc,#e1306ccc,#c13584cc,#833ab4cc,#405de6cc);
+  color: white;
+}
+/* Responsive
+------------------------
+----------------------*/
+@media (max-width:960px) {
+  .insta_btn-div {
+    top: 20vh;
+  }
+}
+@media (max-width:560px) {
+  .insta_btn-div {
+    top: 3vh;
+  }
+}
+/* タイピング
+------------------------
+----------------------*/
+/* p::after {
+  content: '';
+  border-right: 2px solid;
+  animation: flashing 0.6s linear infinite;
+} */
+@keyframes flashing {
+  0% {
+    opacity: 0;
+  }
+}
+
+#scrollvalue {
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #aaa;
+  z-index: 1;
+  color: black;
+  margin: auto 0;
+}
